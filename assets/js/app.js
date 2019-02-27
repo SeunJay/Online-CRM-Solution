@@ -1,8 +1,9 @@
-$(document).ready(function(){
+$(document).ready(function() {
+  $('li').click(function(){
+    $.each(function(li,val) {
 
-    $("h2").click(function(){
-      $(this).hide();
     });
-  
-                    
+    $(li).toggle('.active');
   });
+  });
+

@@ -12,7 +12,7 @@ img {
     max-width: 100%;
 }
 
-.jumbotron {
+#dashboardDisplay {
     background: url(../images/office.jpg) center center no-repeat;
     background-size: cover;
     color: white;
