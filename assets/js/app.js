@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    $("h1").click(function(){
+
+    $("h2").click(function(){
       $(this).hide();
     });
   
