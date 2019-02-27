@@ -127,3 +127,39 @@ $(function () {
     })
 
 })
+
+
+// editing a user using using his id
+function editUser(id) {
+    $('.EWrapper').toggleClass('hidden');
+    $.ajax({
+        method: 'GET',
+        url: `http://localhost:3000/users/${id}`,
+        success: function(data) {
+           console.log(data);
+           $.each(data, function(key, value){
+            $('[name='+key+']', '#userEditForm').val(value);
+          });
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    })
+}
+
+
+// deleting a user using his id
+function deleteUser(id) {
+    $.ajax({
+        method: 'DELETE',
+        url: `http://localhost:3000/users/${id}`,
+        success: function() {
+            console.log('success');
+            $("#getUsers").trigger('click');
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    })
+}
+
