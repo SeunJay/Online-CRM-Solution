@@ -1,17 +1,34 @@
 {
-  "users": [],
+  "users": [
+    {
+      "fullname": "uchenna egbo",
+      "email": "isiwork@gmail.com",
+      "phone": "08062516595",
+      "address": "$4 sweden avenue",
+      "id": 1
+    }
+  ],
   "products": [
     {
       "productName": "Lokmal 50mg",
       "productQty": "1000 pcs",
       "productPrice": "# 4500",
-      "id": 1
+      "id": 4
     },
     {
       "productName": "Lokmal 50mg",
       "productQty": "1000 pcs",
       "productPrice": "# 4500",
-      "id": 2
+      "id": 5
+    }
+  ],
+  "sales": [
+    {
+      "custname": "Mr Ojo Ojo",
+      "product": "Arthemeter 250mg",
+      "quantity": "5pcs",
+      "price": "#950",
+      "id": 1
     }
   ]
 }

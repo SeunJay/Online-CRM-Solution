@@ -40,43 +40,88 @@
 
 
                       <div class="row">
-                            <div class="col col-md-2"></div>
-                            <div class="col col-md-8">
-                                <div class="container mt-4">
-                                <div class="jumbotron ">
-                                    <div class="text-right mb-3"><span><button type="button" class="btn btn-outline-primary"><i class="fas fa-plus-circle"></i> Create New</button></span></div>
-                                    <h2>Sales</h2>
+                          <div class="col col-md-2"></div>
+                          <div class="col col-md-8">
+                              <div class="container mt-4">
+                              <div class="jumbotron">
+                                  <div class="row justify-content-between">
+                                    <div class="col">
+                                        <h2>sales</h2>
                                     </div>
-                                </div>
-                                <div class="col col-md-2"></div>
-                            </div>
-                        </div>
+                                    <div class="col">
+                                      <div class="text-right"><span><button id="addSales" type="button" class="btn btn-outline-primary"><i class="fas fa-plus-circle"></i> Create New</button></span>
+                                      </div>
+                                    </div>
+                                    
+                                    <!-- <div class="col">
+                                      <div class="text-left"><span><button id="getSales" type="button" class="btn btn-outline-info"><i class="fas fa-plus-circle"></i> View Products</button></span></div>
+                                    </div> -->
+                                  </div>
+                                 </div>
+                              </div>
+                              <div class="col col-md-2"></div>
+                          </div>
+                      </div>
 
                         <div class="row justify-content-around">
                           <div class="col-sm-2 col-4"></div>
                           <div class="col-sm-8 col-md-4">
-                              <div class="container bg-dark pt-3 pb-3 mb-3">
-                                  <form class="text-white" id="form" >
+                              <div class="container bg-dark pt-3 pb-3 mb-3 fWrapper hidden">
+                                  <form class="text-white" id="salesForm" >
                                           <h2 class="text-white">Create New Sales</h2>
                                           <div class="form-group">
                                                   <label for="custName">Customer Name</label>
-                                                  <input type="text" class="form-control" id="custname" aria-describedby="custName" placeholder="Customer Name">
+                                                  <input type="text" class="form-control" name="custname" id="custname" aria-describedby="custName" placeholder="Customer Name">
                                                 </div>
                                             
                                           <div class="form-group">
                                             <label for="Product">Product Name</label>
-                                            <input type="text" class="form-control" id="product" aria-describedby="product" placeholder="Enter Product">
+                                            <input type="text" class="form-control" name="product" id="product" aria-describedby="product" placeholder="Enter Product">
                                           </div>
                                           
                                           <div class="form-group">
                                                   <label for="quantity">Quantity</label>
-                                                  <input type="text" class="form-control" id="quantity" aria-describedby="quantity" placeholder="Quantity">
+                                                  <input type="text" class="form-control" name="quantity" id="quantity" aria-describedby="quantity" placeholder="Quantity">
                                           </div>
                                           <div class="form-group">
                                             <label for="price">Total Price</label>
-                                            <input type="text" class="form-control" id="price" aria-describedby="price" placeholder="price">
+                                            <input type="text" class="form-control" name="price" id="price" aria-describedby="price" placeholder="price">
                                       </div>
-                                          <button type="submit" class="btn btn-primary">Submit</button>
+                                          <button class="btn btn-primary">Submit</button>
+                                          <button id="clearSalesForm" class="btn btn-info">Clear Form</button>
+                                        </form>
+                                </div>
+                          </div>
+                         <div class="col-sm-2 col-4"></div>
+                      </div>
+
+
+                      <div class="row justify-content-around">
+                          <div class="col-sm-2 col-4"></div>
+                          <div class="col-sm-8 col-md-4">
+                              <div class="container bg-dark pt-3 pb-3 mb-3 EWrapper hidden">
+                                  <form class="text-white" id="salesEditForm" >
+                                          <h2 class="text-white">Edit Sales</h2>
+                                          <div class="form-group">
+                                                  <label for="custName">Customer Name</label>
+                                                  <input type="text" class="form-control" name="custname" id="custname" aria-describedby="custName" placeholder="Customer Name">
+                                                </div>
+                                            
+                                          <div class="form-group">
+                                            <label for="Product">Product Name</label>
+                                            <input type="text" class="form-control" name="product" id="product" aria-describedby="product" placeholder="Enter Product">
+                                          </div>
+                                          
+                                          <div class="form-group">
+                                                  <label for="quantity">Quantity</label>
+                                                  <input type="text" class="form-control" name="quantity" id="quantity" aria-describedby="quantity" placeholder="Quantity">
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="price">Total Price</label>
+                                            <input type="text" class="form-control" name="price" id="price" aria-describedby="price" placeholder="price">
+                                      </div>
+                                          <button class="btn btn-primary">Submit</button>
+                                          <button id="clearSalesEditForm" class="btn btn-info">Clear Form</button>
                                         </form>
                                 </div>
                           </div>
@@ -98,33 +143,15 @@
                         <thead>
                           <tr>
                             <th scope="col">#</th>
+                            <th scope="col">Customer Name</th>
                             <th scope="col">Product Name</th>
+                            <th scope="col">Quantity</th>
                             <th scope="col">Price</th>
                             <th scope="col" colspan="4">Actions</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Panadol</td>
-                            <td>$45.98</td>
-                            <td><button type="button" class="btn btn-outline-primary">Edit</button></td>
-                            <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Comal</td>
-                            <td>$56.43</td>
-                            <td><button type="button" class="btn btn-outline-primary">Edit</button></td>
-                            <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Artesunate</td>
-                            <td>$34.20</td>
-                            <td><button type="button" class="btn btn-outline-primary">Edit</button></td>
-                            <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
-                          </tr>
+                  
                         </tbody>
                       </table>
                 

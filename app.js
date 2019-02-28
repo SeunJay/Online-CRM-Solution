@@ -18,7 +18,12 @@ $(function () {
     // displaying form for adding new user
     $("#addUser").click(function(event){
         event.preventDefault();
+        $('.fWrapper').animate({
+            height: "toggle",
+            opacity: "toggle"
+        }, "slow")
         $('.fWrapper').toggleClass('hidden');
+        $('.EWrapper').hide();
     })
 
 
@@ -37,7 +42,11 @@ $(function () {
             },
 
             success: function(data) {
-                $("#clearUserForm").trigger('click');
+                location.reload();
+                $('.fWrapper').animate({
+                    height: "toggle",
+                    opacity: "toggle"
+                }, "slow")
             },
             error: function(err) {
                 console.log(err);
@@ -54,8 +63,6 @@ $(function () {
 
     
     // displaying all created users 
-    // $("#getUsers").click(function(event){
-        // event.preventDefault();
         
         $.ajax({
             type: 'GET',
@@ -64,12 +71,6 @@ $(function () {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            // success: function(data) {
-            //     displayResult(data)
-            // },
-            // error: function(err) {
-            //     console.log(err);
-            // }
         }).done(function(data) {
             var $tableBody = $('tbody');
             $tableBody.empty();
@@ -106,16 +107,10 @@ $(function () {
             $tableBody.append('No user added yet');    
         }
         });
-    // })
      
-    // function displayResult(data) { 
-        
-
-
-    // }
-
 
     // editing a user
+
     $('form#userEditForm').on('submit', function(e) {
         e.preventDefault();
         var formData = $(this).serializeObject();
@@ -152,8 +147,12 @@ $(function () {
 
 // editing a user using using his id
 function editUser(id) {
-    $('.EWrapper').toggleClass('hidden');
-     $('.fWrapper').hide();
+    $('.EWrapper').animate({
+                        height: "toggle",
+                        opacity: "toggle"
+                    }, "slow")
+                    $('.EWrapper').toggleClass('hidden');
+                    $('.fWrapper').hide();
     
     $.ajax({
         method: 'GET',
@@ -177,7 +176,7 @@ function editUser(id) {
             method: 'DELETE',
             url: `http://localhost:3000/users/${id}`,
             success: function() {
-                console.log('success');
+                location.reload();
                 $("#getUsers").trigger('click');
             },
             error: function (err) {

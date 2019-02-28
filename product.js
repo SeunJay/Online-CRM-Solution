@@ -21,11 +21,17 @@ $(function() {
     // displaying form for adding products
     $("#addProduct").click(function(event) {
         event.preventDefault();
+        $('.fWrapper').animate({
+            height: "toggle",
+            opacity: "toggle"
+        }, "slow")
         $('.fWrapper').toggleClass('hidden');
+        $('.EWrapper').hide();
     })
 
 
     // creating new product on product form
+
     $('form#productForm').on('submit', function(e) {
         e.preventDefault();
 
@@ -42,6 +48,11 @@ $(function() {
             },
 
             success: function(data) {
+                location.reload();
+                $('.fWrapper').animate({
+                    height: "toggle",
+                    opacity: "toggle"
+                }, "slow")
                 $("#clearProductForm").trigger('click');
             },
             error: function(err) {
@@ -58,8 +69,6 @@ $(function() {
 
 
      // displaying all created products 
-     $("#getProduct").click(function(event){
-        event.preventDefault();
         
         $.ajax({
             type: 'GET',
@@ -69,20 +78,11 @@ $(function() {
                 'Content-Type': 'application/json'
             },
 
-            success: function(data) {
-                displayProductResult(data);
-                
-            },
-            error: function(err) {
-                console.log(err);
-            }
-        })
-    })
+            
+            // function to enumerate created products
 
-
-    // function to enumerate created products 
-    function displayProductResult(data) { 
-        var $tableBody = $('tbody');
+        }).done(function(data) {
+            var $tableBody = $('tbody');
         $tableBody.empty();
 
         
@@ -112,9 +112,16 @@ $(function() {
         } else {
             $tableBody.append('No product added yet');     
         }
+        });
+    // })
+
+
+     
+    // function displayProductResult(data) { 
+        
 
         
-    }
+    // }
 
 
     // editing a product
@@ -147,35 +154,40 @@ $(function() {
         $("#productEditForm")[0].reset();
     })
 
- })
-
-
 
     // deleting a product using his id
-    function deleteProduct(id) {
-        $.ajax({
-            method: 'DELETE',
-            url: `http://localhost:3000/products/${id}`,
-            success: function() {
-                console.log('success');
-                $("#getProduct").trigger('click');
-            },
-            error: function (err) {
-                console.log(err);
-            }
-        })
-    }
+    
+    
+})
 
-
+function deleteProduct(id) {
+    $.ajax({
+        method: 'DELETE',
+        url: `http://localhost:3000/products/${id}`,
+        success: function() {
+            console.log('success');
+            location.reload();
+            $("#getProduct").trigger('click');
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    })
+}
 
     // editing a product using using its id
     
     function editProduct(id) {
+        $('.EWrapper').animate({
+            height: "toggle",
+            opacity: "toggle"
+        }, "slow")
         $('.EWrapper').toggleClass('hidden');
-        $('fWrapper').hide();
+        $('.fWrapper').hide();
+
         $.ajax({
             method: 'GET',
-            url: `http://localhost:3000/products/${id}`,
+            url: `http://localhost:3000/products/${id}`, // returns undefined and doesnt put to db 
             success: function(data) {
             console.log(data);
             $.each(data, function(key, value){
