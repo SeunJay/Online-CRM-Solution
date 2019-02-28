@@ -50,6 +50,11 @@ $(function() {
         })
     })
 
+    $("#clearProductForm").click(function(e){
+        e.preventDefault()
+        $("#productForm")[0].reset();
+    })
+
 
 
      // displaying all created products 
@@ -77,28 +82,38 @@ $(function() {
 
     // function to enumerate created products 
     function displayProductResult(data) { 
-        $('.productView').empty()
+        var $tableBody = $('tbody');
+        $tableBody.empty();
 
-        var $list = $('<ul>');
-
+        
         if(data.length) {
             data.forEach(item => {
-                var $listItem = $('<li>')
-                var $editButton = $(`<button id="editBtn" onClick="editProduct(${item.id})">Edit Product</button>`)
-                var $deleteButton = $(`<button id="delBtn" onClick="deleteProduct(${item.id})">Delete Product</button>`)
-                $listItem.append(item.id + '. ' + item.name + ' ' + item.price);
-                $listItem.append($editButton);
-                $listItem.append($deleteButton);
-                $list.append($listItem);
+
+            var $row = $('<tr>')
+                var $productId = $('<td>');
+                var $productName = $('<td>');
+                var $productQty = $('<td>');
+                var $productPrice = $('<td>');
+                var $editAction = $(`<td><button id="editBtn" class="btn btn-outline-primary" onClick="editProduct(${item.id})">Edit Product</button></td>`)
+                var $delAction = $(`<td><button id="delBtn" class="btn btn-outline-danger" onClick="deleteProduct(${item.id})">Delete Product</button></td>`)
+                $productId.append(item.id +' .');
+                $productName.append(item.productName);
+                $productQty.append(item.productQty);
+                $productPrice.append(item.productPrice)
+                $row.append($productId)
+                    .append($productName)
+                    .append($productQty)
+                    .append($productPrice)
+                    .append($editAction)
+                    .append($delAction)
+                    .appendTo($tableBody);
             });
     
         } else {
-            var $listItem = $('<li>')
-            $listItem.append('No user added yet');
-            $list.append($listItem);     
+            $tableBody.append('No product added yet');     
         }
 
-        $('.productView').append($list); 
+        
     }
 
 
@@ -126,10 +141,10 @@ $(function() {
     })
 
     
-    // clear form upon clicking
-    $("#clearProductForm").click(function(e){
+    // clear edit form upon clicking
+    $("#clearProductEditForm").click(function(e){
         e.preventDefault()
-        $("#productForm")[0].reset();
+        $("#productEditForm")[0].reset();
     })
 
  })
@@ -153,9 +168,11 @@ $(function() {
 
 
 
-    // editing a product using using his id
+    // editing a product using using its id
+    
     function editProduct(id) {
         $('.EWrapper').toggleClass('hidden');
+        $('fWrapper').hide();
         $.ajax({
             method: 'GET',
             url: `http://localhost:3000/products/${id}`,

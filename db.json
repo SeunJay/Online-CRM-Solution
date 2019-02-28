@@ -1,0 +1,17 @@
+{
+  "users": [],
+  "products": [
+    {
+      "productName": "Lokmal 50mg",
+      "productQty": "1000 pcs",
+      "productPrice": "# 4500",
+      "id": 1
+    },
+    {
+      "productName": "Lokmal 50mg",
+      "productQty": "1000 pcs",
+      "productPrice": "# 4500",
+      "id": 2
+    }
+  ]
+}
