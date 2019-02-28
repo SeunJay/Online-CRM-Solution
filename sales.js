@@ -41,7 +41,7 @@ $(function() {
             },
 
             success: function(data) {
-                $("#clearForm").trigger('click');
+                $("#clearUserForm").trigger('click');
             },
             error: function(err) {
                 console.log(err);
