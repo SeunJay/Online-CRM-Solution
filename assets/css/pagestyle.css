@@ -1,0 +1,12 @@
+body {
+    color:white;
+}
+
+.jumbotron {
+    background: rgba(0, 0, 0, 0.801);
+    
+}
+
+h2 {
+    text-transform: uppercase;
+}
