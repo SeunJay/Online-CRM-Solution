@@ -14,7 +14,6 @@ $(function () {
         });
         return o;
     };
-/******************SALES FUNCTIONALITY*******************/
 
     // displaying form for adding new user
     $("#addUser").click(function(event){
@@ -38,7 +37,7 @@ $(function () {
             },
 
             success: function(data) {
-                $("#clearForm").trigger('click');
+                $("#clearUserForm").trigger('click');
             },
             error: function(err) {
                 console.log(err);
@@ -121,10 +120,11 @@ $(function () {
     })
     
     // clear form upon clicking
-    $("#saveUsers").click(function(e){
+    $("#clearUserForm").click(function(e){
         e.preventDefault()
         $("#userForm")[0].reset();
     })
+    
 
 })
 
@@ -162,4 +162,5 @@ function deleteUser(id) {
         }
     })
 }
+
 
