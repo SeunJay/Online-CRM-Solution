@@ -16,10 +16,10 @@ $(function() {
         return o;
     };
 
-    /********************** PRODUCT FUNCTIONALITY*******************************/
+    /********************** PRODUCT FUNCTIONALITY  *******************************/
 
     // displaying form for adding products
-    $("#addProduct").click(function(event){
+    $("#addProduct").click(function(event) {
         event.preventDefault();
         $('.fWrapper').toggleClass('hidden');
     })
@@ -42,7 +42,7 @@ $(function() {
             },
 
             success: function(data) {
-                $("#clearForm").trigger('click');
+                $("#clearProductForm").trigger('click');
             },
             error: function(err) {
                 console.log(err);
@@ -127,51 +127,49 @@ $(function() {
 
     
     // clear form upon clicking
-    $("#saveProduct").click(function(e){
+    $("#clearProductForm").click(function(e){
         e.preventDefault()
         $("#productForm")[0].reset();
     })
 
-})
-
-
-// deleting a user using his id
-function deleteProduct(id) {
-    $.ajax({
-        method: 'DELETE',
-        url: `http://localhost:3000/products/${id}`,
-        success: function() {
-            console.log('success');
-            $("#getProduct").trigger('click');
-        },
-        error: function (err) {
-            console.log(err);
-        }
-    })
-}
+ })
 
 
 
-// editing a user using using his id
-function editProduct(id) {
-    $('.EWrapper').toggleClass('hidden');
-    $.ajax({
-        method: 'GET',
-        url: `http://localhost:3000/sales/${id}`,
-        success: function(data) {
-           console.log(data);
-           $.each(data, function(key, value){
-            $('[name='+key+']', '#productEditForm').val(value);
-          });
-        },
-        error: function (err) {
-            console.log(err);
-        }
-    })
-}i
+    // deleting a product using his id
+    function deleteProduct(id) {
+        $.ajax({
+            method: 'DELETE',
+            url: `http://localhost:3000/products/${id}`,
+            success: function() {
+                console.log('success');
+                $("#getProduct").trigger('click');
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        })
+    }
 
 
 
+    // editing a product using using his id
+    function editProduct(id) {
+        $('.EWrapper').toggleClass('hidden');
+        $.ajax({
+            method: 'GET',
+            url: `http://localhost:3000/products/${id}`,
+            success: function(data) {
+            console.log(data);
+            $.each(data, function(key, value){
+                $('[name='+key+']', '#productEditForm').val(value);
+            });
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        })
+    }
 
 
 
