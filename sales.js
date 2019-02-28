@@ -132,3 +132,39 @@ $(function() {
     })
 
 });
+
+
+// deleting a sales using his id
+function deleteSales(id) {
+    $.ajax({
+        method: 'DELETE',
+        url: `http://localhost:3000/sales/${id}`,
+        success: function() {
+            console.log('success');
+            $("#getSales").trigger('click');
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    })
+}
+
+
+
+// editing a sales using using his id
+function editSales(id) {
+    $('.EWrapper').toggleClass('hidden');
+    $.ajax({
+        method: 'GET',
+        url: `http://localhost:3000/sales/${id}`,
+        success: function(data) {
+           console.log(data);
+           $.each(data, function(key, value){
+            $('[name='+key+']', '#salesEditForm').val(value);
+          });
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    })
+}
