@@ -1,175 +1,252 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Customer Relationship Management</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Regular meta tags always comes first -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lawgrotto</title>
+    <meta name="Previewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600,900" rel="stylesheet">
+    <!-- Custom css -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">Lawgrotto&reg;</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="pages/products.html">Products</a>
-                    </li>
-                    <li class="nav-item">
-                            <a class="nav-link" href="pages/sales.html">Sales</a>
-                          </li>
-                          <li class="nav-item">
-                                <a class="nav-link" href="pages/reports.html">Reports</a>
-                              </li>
-                  </ul>
-                 </div>
-                </div>
-              </nav>
-              </header>
 
-
-             
-
-    
-
-    <div class="jumbotron" id="dashboardDisplay">
-      <h2 id="dashboard">Admin / Dashboard</h2>
-    </div>
-
-    <div class="container">
-          <div class="row justify-content-around">
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <a class="card-link" href="pages/users.html">
-              <div class="card text-white bg-dark mb-5 text-center">
-                <div class="card-body">
-                  <span><i class="fas fa-users"></i></span>
-                  <h2 class="card-title">
-                    Users
-                  </h2>
-                  <div class="card-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </div>
-                </div>
-              </div>
-              </a>
-            </div>
-          
-          
-                    
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <a class="card-link" href="pages/products.html">
-            <div class="card text-white bg-dark mb-5 text-center">
-              <div class="card-body">
-                <span><i class="fas fa-capsules"></i></span>
-                <h2 class="card-title">
-                  Products
-                </h2>
-                <div class="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </div>
-              </div>
-            </div>
-            </a>
-          </div>
-          
-                    
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <a class="card-link" href="pages/sales.html">
-            <div class="card text-white bg-dark mb-5 text-center">
-              <div class="card-body">
-                <span><i class="fas fa-chart-line"></i></span>
-                <h2 class="card-title">
-                  Sales
-                </h2>
-                <div class="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </div>
-              </div>
-            </div>
-            </a>
-          </div> 
-          
-          
-         </div>
-        </div>
-
-        <div class="container">
-            <div class="row justify-content-around">
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <a class="card-link" href="pages/invoice.html">
-                <div class="card text-white bg-dark mb-3 text-center">
-                  <div class="card-body">
-                    <span><i class="fas fa-file-invoice"></i></span>
-                    <h2 class="card-title">
-                      Invoice
-                    </h2>
-                    <div class="card-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <header>
+                <div class="collapse bg-dark" id="navbarHeader">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-8 col-md-7 py-4">
+                        <h4 class="text-white">About</h4>
+                        <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+                      </div>
+                      <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white">Contact</h4>
+                        <ul class="list-unstyled">
+                          <li><a href="twitter.com" class="text-white">Follow on Twitter</a></li>
+                          <li><a href="facebook.com" class="text-white">Like on Facebook</a></li>
+                          <li><a href="gmail.com" class="text-white">Email Us</a></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
-                </a>
-              </div>
-            
-            
-                      
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <a class="card-link" href="pages/reports.html">
-              <div class="card text-white bg-dark mb-3 text-center">
-                <div class="card-body">
-                  <span><i class="far fa-chart-bar"></i><span>
-                  <h2 class="card-title">
-                    Reports
-                  </h2>
-                  <div class="card-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+
+                <div class="navbar navbar-dark bg-dark shadow-sm">
+                        <div class="container d-flex justify-content-between">
+                          <a href="#" class="navbar-brand d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2" focusable="false" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                            <strong>Lawgrotto&reg;</strong>
+                          </a>
+                          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                        </div>
+                      </div>
+              </header>
+              
+              <main role="main">
+              
+                <section class="jumbotron text-center">
+                  <div class="container">
+                    <h1 class="jumbotron-heading">Lawgrotto</h1>
+                    <p class="lead">Something short and leading about the collection below — its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+                    <p>
+                      <a href="#" class="btn btn-primary my-2">Explore Collections</a>
+                      <a href="user-dashboard.html" class="btn btn-secondary my-2">View Dashboard</a>
+                    </p>
                   </div>
+                </section>
+              
+                <div class="album py-5 bg-light">
+                 <section class="phones">
+                     <div class="container">
+                     <h3 id="phones" class="mb-2">Phones</h3>
+                     
+                     <div class="row">
+                       <div class="col-md-4">
+                         <div class="card mb-4 shadow-sm">
+                           <img src="assets/images/android-pen.jpg"  class="card-img-top"  alt="An Android Phone">
+                           <div class="card-body">
+                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                             <div class="d-flex justify-content-between align-items-center">
+                               <div class="group">
+                                 <button type="button" class="btn btn-sm btn-outline-secondary">Preview</button>
+                                 <button type="button" class="btn btn-sm btn-outline-danger">Buy</button>
+                               </div>
+                               <small class="text-muted">9 mins</small>
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+                       <div class="col-md-4">
+                         <div class="card mb-4 shadow-sm">
+                           <img src="assets/images/phones-4.jpg"  class="card-img-top"  alt="Four Phones">
+                           <div class="card-body">
+                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                             <div class="d-flex justify-content-between align-items-center">
+                               <div class="group">
+                                 <button type="button" class="btn btn-sm btn-outline-secondary">Preview</button>
+                                 <button type="button" class="btn btn-sm btn-outline-danger">Buy</button>
+                               </div>
+                               <small class="text-muted">9 mins</small>
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+                       <div class="col-md-4">
+                         <div class="card mb-4 shadow-sm">
+                           <img src="assets/images/big-tab.jpg"  class="card-img-top"  alt="A phone in the dark">
+                           <div class="card-body">
+                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                             <div class="d-flex justify-content-between align-items-center">
+                               <div class="group">
+                                 <button type="button" class="btn btn-sm btn-outline-secondary">Preview</button>
+                                 <button type="button" class="btn btn-sm btn-outline-danger">Buy</button>
+                               </div>
+                               <small class="text-muted">9 mins</small>
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                    </div>
+                 </section>
+              
+              
+                 <section class="Laptops">
+                        <div class="container">
+                        <h3 id="phones" class="mb-2">Laptops</h3>
+                        
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                              <img src="assets/images/glasses-pc.jpg"  class="card-img-top"  alt="A google on top of a laptop">
+                              <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                  <div class="group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Preview</button>
+                                    <button type="button" class="btn btn-sm btn-outline-danger">Buy</button>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                              <img src="assets/images/mac-pc.jpg"  class="card-img-top"  alt="A mac PC">
+                              <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                  <div class="group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Preview</button>
+                                    <button type="button" class="btn btn-sm btn-outline-danger">Buy</button>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                              <img src="assets/images/windows-pc.jpg"  class="card-img-top"  alt="A Windows PC">
+                              <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                  <div class="group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Preview</button>
+                                    <button type="button" class="btn btn-sm btn-outline-danger">Buy</button>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                       </div>
+                    </section>
+              
+                    <section class="Accessories">
+                            <div class="container">
+                            <h3 id="phones" class="mb-2">Accessories</h3>
+                            
+                            <div class="row">
+                              <div class="col-md-4">
+                                <div class="card mb-4 shadow-sm">
+                                  <img src="assets/images/planning.jpg"  class="card-img-top"  alt=" A PC in the dark">
+                                  <div class="card-body">
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div class="group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Preview</button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger">Buy</button>
+                                      </div>
+                                      <small class="text-muted">9 mins</small>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-4">
+                                <div class="card mb-4 shadow-sm">
+                                  <img src="assets/images/stars.jpg"  class="card-img-top"  alt=" A hand typing">
+                                  <div class="card-body">
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div class="group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Preview</button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger">Buy</button>
+                                      </div>
+                                      <small class="text-muted">9 mins</small>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-4">
+                                <div class="card mb-4 shadow-sm">
+                                  <img src="assets/images/phone-dark.jpg" class="card-img-top" alt="Dark Phone">
+                                  <div class="card-body">
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div class="group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Preview</button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger">Buy</button>
+                                      </div>
+                                      <small class="text-muted">9 mins</small>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                           </div>
+                        </section>
+                    </div>
+              
+              </main>
+              
+              <footer class="text-muted">
+                <div class="container">
+                  <p class="float-right">
+                    <a href="#">Back to top</a>
+                  </p>
+                  <p>Lawgrotto is &copy; products and sales online company that provides a world class user experience.</p>
+                  <p>New here? <a href="pages/signUp.html">Sign up here</a> or feel free to explore our <a href="index.html">collections</a>.</p>
                 </div>
-              </div>
-              </a>
-            </div>
-            
-                      
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <a class="card-link" href="signUp.html">
-              <div class="card text-white bg-dark mb-3 text-center">
-                <div class="card-body">
-                  <span><i class="fas fa-sign-out-alt"></i></span>
-                  <h2 class="card-title">
-                    Sign out
-                  </h2>
-                  <div class="card-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </div>
-                </div>
-              </div>
-              </a>
-            </div> 
-            
-            
-           </div>
-          </div>
-        
-    
+              </footer>
 
 
 
 
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
 </body>
 </html>

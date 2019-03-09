@@ -1,11 +1,18 @@
 {
   "users": [
     {
-      "fullname": "uchenna egbo",
-      "email": "isiwork@gmail.com",
+      "fullname": "Egbo Uchenna ",
+      "email": "waynnyluv@gmail.com",
+      "phone": "09087564324",
+      "address": "#22 Json Street ",
+      "id": 1
+    },
+    {
+      "fullname": "Henry Clark",
+      "email": "uchesco4jesus@gmail.com",
       "phone": "08062516595",
       "address": "$4 sweden avenue",
-      "id": 1
+      "id": 2
     }
   ],
   "products": [
@@ -30,5 +37,7 @@
       "price": "#950",
       "id": 1
     }
-  ]
+  ],
+  "customers": [],
+  "contact": []
 }
