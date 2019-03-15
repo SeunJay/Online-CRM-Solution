@@ -1,174 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sales</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/pagestyle.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sales</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/pagestyle.css">
 </head>
+
 <body>
-        <header>
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <div class="container">
-                        <a class="navbar-brand" href="../index.html">Lawgrotto&reg;</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                        </button>
-                      
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                          <ul class="navbar-nav ml-auto">
-                            <li class="nav-item active">
-                              <a class="nav-link" href="../admin dashboard.html">Dashboard <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="sales.html">Sales</a>
-                            </li>
-                            <li class="nav-item">
-                                    <a class="nav-link" href="products.html">Products</a>
-                                  </li>
-                                  <li class="nav-item">
-                                        <a class="nav-link" href="reports.html">Reports</a>
-                                      </li>
-                          </ul>
-                         </div>
-                        </div>
-                      </nav>
-                      </header>
 
+  <!-- ********************************   HEADING   ************************************ -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Lawgrotto&reg;</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-                      <div class="row">
-                          <div class="col col-md-2"></div>
-                          <div class="col col-md-8">
-                              <div class="container mt-4">
-                              <div class="jumbotron">
-                                  <div class="row justify-content-between">
-                                    <div class="col">
-                                        <h2>sales</h2>
-                                    </div>
-                                    <div class="col">
-                                      <div class="text-right"><span><button id="addSales" type="button" class="btn btn-outline-primary"><i class="fas fa-plus-circle"></i> Create New</button></span>
-                                      </div>
-                                    </div>
-                                    
-                                    <!-- <div class="col">
-                                      <div class="text-left"><span><button id="getSales" type="button" class="btn btn-outline-info"><i class="fas fa-plus-circle"></i> View Products</button></span></div>
-                                    </div> -->
-                                  </div>
-                                 </div>
-                              </div>
-                              <div class="col col-md-2"></div>
-                          </div>
-                      </div>
-
-                        <div class="row justify-content-around">
-                          <div class="col-sm-2 col-4"></div>
-                          <div class="col-sm-8 col-md-4">
-                              <div class="container bg-dark pt-3 pb-3 mb-3 fWrapper hidden">
-                                  <form class="text-white" id="salesForm" >
-                                          <h2 class="text-white">Create New Sales</h2>
-                                          <div class="form-group">
-                                                  <label for="custName">Customer Name</label>
-                                                  <input type="text" class="form-control" name="custname" id="custname" aria-describedby="custName" placeholder="Customer Name">
-                                                </div>
-                                            
-                                          <div class="form-group">
-                                            <label for="Product">Product Name</label>
-                                            <input type="text" class="form-control" name="product" id="product" aria-describedby="product" placeholder="Enter Product">
-                                          </div>
-                                          
-                                          <div class="form-group">
-                                                  <label for="quantity">Quantity</label>
-                                                  <input type="text" class="form-control" name="quantity" id="quantity" aria-describedby="quantity" placeholder="Quantity">
-                                          </div>
-                                          <div class="form-group">
-                                            <label for="price">Total Price</label>
-                                            <input type="text" class="form-control" name="price" id="price" aria-describedby="price" placeholder="price">
-                                      </div>
-                                          <button class="btn btn-primary">Submit</button>
-                                          <button id="clearSalesForm" class="btn btn-info">Clear Form</button>
-                                        </form>
-                                </div>
-                          </div>
-                         <div class="col-sm-2 col-4"></div>
-                      </div>
-
-
-                      <div class="row justify-content-around">
-                          <div class="col-sm-2 col-4"></div>
-                          <div class="col-sm-8 col-md-4">
-                              <div class="container bg-dark pt-3 pb-3 mb-3 EWrapper hidden">
-                                  <form class="text-white" id="salesEditForm" >
-                                          <h2 class="text-white">Edit Sales</h2>
-                                          <div class="form-group">
-                                                  <label for="custName">Customer Name</label>
-                                                  <input type="text" class="form-control" name="custname" id="custname" aria-describedby="custName" placeholder="Customer Name">
-                                                </div>
-                                            
-                                          <div class="form-group">
-                                            <label for="Product">Product Name</label>
-                                            <input type="text" class="form-control" name="product" id="product" aria-describedby="product" placeholder="Enter Product">
-                                          </div>
-                                          
-                                          <div class="form-group">
-                                                  <label for="quantity">Quantity</label>
-                                                  <input type="text" class="form-control" name="quantity" id="quantity" aria-describedby="quantity" placeholder="Quantity">
-                                          </div>
-                                          <div class="form-group">
-                                            <label for="price">Total Price</label>
-                                            <input type="text" class="form-control" name="price" id="price" aria-describedby="price" placeholder="price">
-                                      </div>
-                                          <button class="btn btn-primary">Submit</button>
-                                          <button id="clearSalesEditForm" class="btn btn-info">Clear Form</button>
-                                        </form>
-                                </div>
-                          </div>
-                         <div class="col-sm-2 col-4"></div>
-                      </div>
-                  
-
-
-
-
-
-    <div class="row justify-content-around">
-        <div class="col col-2"></div>
-        <div class="col-sm-1 col-md-8">
-
-            <h2 class=""></h2>
-
-                <table class="table table-striped">
-                        <thead>
-                          <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Customer Name</th>
-                            <th scope="col">Product Name</th>
-                            <th scope="col">Quantity</th>
-                            <th scope="col">Price</th>
-                            <th scope="col" colspan="4">Actions</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                  
-                        </tbody>
-                      </table>
-                
-
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="../admin dashboard.html">Dashboard <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sales.html">Sales</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reports.html">Reports</a>
+            </li>
+          </ul>
         </div>
-        <div class="col col-md-2"></div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- *********************** JUMBOTRON HEADING ************************** -->
+
+  <div class="row">
+    <div class="col col-md-2"></div>
+    <div class="col col-md-8">
+      <div class="container mt-4">
+        <div class="jumbotron">
+          <div class="row justify-content-between">
+            <div class="col">
+              <h2>sales</h2>
+            </div>
+            <div class="col">
+              <div class="text-right"><span><button data-toggle="modal" data-target="#addSales" type="button"
+                    class="btn btn-outline-primary"><i class="fas fa-plus-circle"></i> Create New</button></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col col-md-2"></div>
     </div>
+  </div>
+
+
+  <!--     ************************  CREATE SALES FORM   ****************************** -->
+
+  <!-- Modal -->
+  <div class="modal fade text-dark" id="addSales" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalSalesProduct">Create Sales</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="salesForm">
+            <div class="form-group">
+              <label for="custName">Customer Name</label>
+              <input type="text" class="form-control" name="custname" id="custname" aria-describedby="custName"
+                placeholder="Customer Name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="Product">Product Name</label>
+              <input type="text" class="form-control" name="product" id="product" aria-describedby="product"
+                placeholder="Enter Product" required>
+            </div>
+
+            <div class="form-group">
+              <label for="quantity">Quantity</label>
+              <input type="text" class="form-control" name="quantity" id="quantity" aria-describedby="quantity"
+                placeholder="Quantity" required>
+            </div>
+            <div class="form-group">
+              <label for="price">Total Price</label>
+              <input type="text" class="form-control" name="price" id="price" aria-describedby="price"
+                placeholder="price" required>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary">Submit</button>
+              <button id="clearSalesForm" class="btn btn-info">Clear Form</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- **************************    EDIT SALES FORM    **************************** -->
+  <!-- Modal -->
+  <div class="modal fade text-dark" id="editSales" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalAddProduct">Edit Product</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="salesEditForm">
+            <div class="form-group">
+              <label for="custName">Customer Name</label>
+              <input type="text" class="form-control" name="custname" id="custname" aria-describedby="custName"
+                placeholder="Customer Name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="Product">Product Name</label>
+              <input type="text" class="form-control" name="product" id="product" aria-describedby="product"
+                placeholder="Enter Product" required>
+            </div>
+
+            <div class="form-group">
+              <label for="quantity">Quantity</label>
+              <input type="text" class="form-control" name="quantity" id="quantity" aria-describedby="quantity"
+                placeholder="Quantity" required>
+            </div>
+            <div class="form-group">
+              <label for="price">Total Price</label>
+              <input type="text" class="form-control" name="price" id="price" aria-describedby="price"
+                placeholder="price" required>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary">Submit</button>
+              <button id="clearSalesEditForm" class="btn btn-info">Clear Form</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
 
 
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="../assets/js/sales.js"></script>
-    </body>
-    </html>
+  <div class="row justify-content-around">
+    <div class="col"></div>
+    <div class="col-md-8">
+
+      <h2 class=""></h2>
+
+      <table class="table table-striped">
+        <thead class="bg-dark text-white">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+            <th scope="col" colspan="4">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+
+
+    </div>
+    <div class="col"></div>
+  </div>
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="../assets/js/sales.js"></script>
+</body>
+
+</html>

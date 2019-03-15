@@ -2,17 +2,31 @@
   "users": [
     {
       "fullname": "Egbo Uchenna ",
-      "email": "waynnyluv@gmail.com",
-      "phone": "09087564324",
-      "address": "#22 Json Street ",
+      "email": "uchesco4jesus@gmail.com",
+      "phone": "08032936292",
+      "address": "No 22 jSon Odinobi Street ",
       "id": 1
     },
     {
-      "fullname": "Henry Clark",
-      "email": "uchesco4jesus@gmail.com",
-      "phone": "08062516595",
-      "address": "$4 sweden avenue",
+      "fullname": "Jayeoba Seun",
+      "email": "jayseun@gmail.com",
+      "phone": "07045367723",
+      "address": "were 32 uchida street",
       "id": 2
+    },
+    {
+      "fullname": "Henry Clark",
+      "email": "waynnyluv@gmail.com",
+      "phone": "09065736293",
+      "address": "#22 Json Street ",
+      "id": 3
+    },
+    {
+      "fullname": "Ade scko",
+      "email": "isiwork@gmail.com",
+      "phone": "098076746485",
+      "address": "kjnke",
+      "id": 4
     }
   ],
   "products": [
@@ -20,22 +34,35 @@
       "productName": "Lokmal 50mg",
       "productQty": "1000 pcs",
       "productPrice": "# 4500",
-      "id": 4
+      "id": 5
     },
     {
-      "productName": "Lokmal 50mg",
-      "productQty": "1000 pcs",
-      "productPrice": "# 4500",
-      "id": 5
+      "productName": "Ginseng 500mg",
+      "productQty": "500pcs",
+      "productPrice": "#3500",
+      "id": 6
+    },
+    {
+      "productName": "Amoxcil 500ml",
+      "productQty": "100pcs",
+      "productPrice": "#600",
+      "id": 7
     }
   ],
   "sales": [
     {
       "custname": "Mr Ojo Ojo",
       "product": "Arthemeter 250mg",
-      "quantity": "5pcs",
-      "price": "#950",
+      "quantity": "50pcs",
+      "price": "#10000",
       "id": 1
+    },
+    {
+      "custname": "BeCharm Pharm",
+      "product": "Ciprofloxacil 300mml",
+      "quantity": "50pcs",
+      "price": "#3000",
+      "id": 2
     }
   ],
   "customers": [],
